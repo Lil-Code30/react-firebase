@@ -1,3 +1,178 @@
+/* Auth forms and Todos styled with theme variables from index.css */
+.auth-form-container {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5em 2em;
+  margin: 2em auto;
+  max-width: 350px;
+  box-shadow: var(--shadow);
+}
+.auth-form-container h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 1em;
+  text-align: center;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.auth-form label {
+  font-size: 1em;
+  color: var(--text);
+  margin-bottom: 0.2em;
+}
+.auth-form input {
+  border: 1.5px solid var(--border);
+  border-radius: 7px;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  background: var(--bg);
+  color: var(--text-h);
+  outline: none;
+  transition:
+    border 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(60, 60, 60, 0.04);
+}
+.auth-form input:focus {
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-bg);
+}
+.auth-form button {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 7px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 var(--accent-bg);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+  margin-top: 0.5em;
+}
+.auth-form button:hover {
+  background: var(--accent-border);
+  color: var(--text-h);
+  box-shadow: 0 4px 16px 0 var(--accent-bg);
+}
+.auth-toggle {
+  text-align: center;
+  margin-top: 1em;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.97em;
+  text-decoration: underline;
+}
+
+/* Todos page theme-matching styles */
+.soft-todo-section-title {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--text-h);
+  background: none;
+  margin-bottom: 1em;
+  letter-spacing: 0.5px;
+}
+.soft-todo-form {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2em 1.5em;
+  margin-bottom: 2em;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 400px;
+}
+.soft-todo-label {
+  font-weight: 500;
+  color: var(--text);
+  font-size: 1em;
+}
+.soft-todo-input {
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  background: var(--bg);
+  color: var(--text-h);
+  outline: none;
+  transition:
+    border 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(60, 60, 60, 0.04);
+}
+.soft-todo-input:focus {
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-bg);
+}
+.soft-todo-btn {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 var(--accent-bg);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.soft-todo-btn:hover {
+  background: var(--accent-border);
+  color: var(--text-h);
+  box-shadow: 0 4px 16px 0 var(--accent-bg);
+}
+.soft-todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 500px;
+}
+.soft-todo-item {
+  background: var(--bg);
+  color: var(--text-h);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 1em 1.2em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 6px 0 rgba(60, 60, 60, 0.06);
+  font-size: 1.05em;
+  letter-spacing: 0.2px;
+  transition:
+    box-shadow 0.2s,
+    border 0.2s;
+}
+.soft-todo-item:hover {
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 4px 16px 0 var(--accent-bg);
+}
+.soft-todo-item-empty {
+  background: var(--bg);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 1em 1.2em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 6px 0 rgba(60, 60, 60, 0.04);
+}
+.soft-todo-hr {
+  border: none;
+  border-top: 1.5px solid var(--border);
+  margin: 2em 0;
+}
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -167,7 +342,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
