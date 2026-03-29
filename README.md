@@ -9,3 +9,18 @@ This project demonstrates how to implement user authentication and data manageme
   , read, update, and delete their tasks.
 
 ![alt text](image.png)
+
+## Environment Variables Setup
+
+Before running the project, create a `.env` file in the root directory and add your Firebase configuration variables as shown below:
+
+```
+VITE_FIREBASE_API_KEY=""
+VITE_FIREBASE_AUTH_DOMAIN=""
+VITE_FIREBASE_PROJECT_ID=""
+VITE_FIREBASE_STORAGE_BUCKET=""
+VITE_FIREBASE_MESSAGING_SENDER_ID=""
+VITE_FIREBASE_APP_ID=""
+```
+
+Replace the empty strings with your actual Firebase project configuration values, which can be found in your Firebase console under project settings.
