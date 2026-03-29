@@ -1,25 +1,164 @@
-/* Auth forms and Todos styled with theme variables from index.css */
+.todos-item.completed {
+  color: #b0b0b0;
+  text-decoration: line-through;
+  background: #f4f3ec;
+}
+/* Theme-based styles for Todos page */
+.todos-section-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-h);
+  margin-bottom: 1em;
+  letter-spacing: 0.5px;
+}
+.todos-form {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2em 1.5em;
+  margin-bottom: 2em;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 400px;
+}
+.todos-label {
+  font-weight: 500;
+  color: var(--text);
+  font-size: 1em;
+}
+.todos-input {
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  background: var(--bg);
+  color: var(--text-h);
+  outline: none;
+  transition:
+    border 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(60, 60, 60, 0.04);
+}
+.todos-input:focus {
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-bg);
+}
+.todos-btn {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 var(--accent-bg);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.todos-btn:hover {
+  background: var(--accent-border);
+  color: var(--text-h);
+  box-shadow: 0 4px 16px 0 var(--accent-bg);
+}
+.todos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 500px;
+}
+.todos-item {
+  background: var(--bg);
+  color: var(--text-h);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 1em 1.2em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 6px 0 rgba(60, 60, 60, 0.06);
+  font-size: 1.05em;
+  letter-spacing: 0.2px;
+  transition:
+    box-shadow 0.2s,
+    border 0.2s;
+}
+.todos-item-empty {
+  background: var(--bg);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 1em 1.2em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 6px 0 rgba(60, 60, 60, 0.04);
+}
+.todos-hr {
+  border: none;
+  border-top: 1.5px solid var(--border);
+  margin: 2em 0;
+}
+.todos-logout-btn {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.1em;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 1em 0 1.5em 0;
+  box-shadow: 0 2px 8px 0 var(--accent-bg);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.todos-logout-btn {
+  background: #e53935;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.1em;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 1em 0 1.5em 0;
+  box-shadow: 0 2px 8px 0 rgba(229, 57, 53, 0.1);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.todos-logout-btn:hover {
+  background: #b71c1c;
+  color: #fff;
+  box-shadow: 0 4px 16px 0 rgba(229, 57, 53, 0.13);
+}
+
 .auth-form-container {
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1.5em 2em;
   margin: 2em auto;
-  max-width: 350px;
+  max-width: 400px;
+  min-width: 260px;
+  width: 100%;
   box-shadow: var(--shadow);
-}
-.auth-form-container h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--text-h);
-  margin-bottom: 1em;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .auth-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  align-items: center;
 }
+
 .auth-form label {
   font-size: 1em;
   color: var(--text);
@@ -90,7 +229,23 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
+  max-width: 340px;
+  width: 100%;
+}
+.todos-form {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2em 1.5em;
+  margin-bottom: 2em;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   max-width: 400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .soft-todo-label {
   font-weight: 500;
@@ -137,7 +292,17 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 500px;
+  max-width: 340px;
+  width: 100%;
+}
+.todos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .soft-todo-item {
   background: var(--bg);

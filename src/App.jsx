@@ -1,11 +1,13 @@
 import {
   createUserWithEmailAndPassword,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "./config/firebase";
 import "./App.css";
 import Todos from "./pages/Todos";
 import React, { useState } from "react";
+import { useEffect } from "react";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -109,10 +111,33 @@ function App() {
     </div>
   );
 
+  useEffect(() => {
+    const authUnSub = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+        setShowTodos(true);
+      } else {
+        setUser(null);
+        setShowTodos(false);
+      }
+    });
+
+    return () => authUnSub();
+  }, []);
+
   return (
     <>
       <h1>Firebase + React</h1>
-      {showLogin ? showLoginForm() : showTodos ? <Todos /> : showSignupForm()}
+      {showLogin ? (
+        showLoginForm()
+      ) : showTodos ? (
+        <>
+          {" "}
+          <Todos credentials={user} />{" "}
+        </>
+      ) : (
+        showSignupForm()
+      )}
     </>
   );
 }
